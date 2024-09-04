@@ -1,7 +1,6 @@
 const { join } = require("path");
 const fs = require("fs/promises");
 async function deletingTempFiles() {
-  // now we have to delete the files inside the temp folder
   try {
     const files = await fs.readdir(join(process.cwd(), `/temp/`));
     for (let i in files) {
