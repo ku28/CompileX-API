@@ -1,6 +1,10 @@
-const express = require("express");
-const router = express.Router();
-const v1 = require("./v1/index");
-router.use("/v1", v1);
+import express from "express";
 
-module.exports = router;
+const router = express.Router();
+
+// Define your v1 routes here
+router.get("/", (req, res) => {
+    res.send("Hello from v1!");
+});
+
+export default router;
